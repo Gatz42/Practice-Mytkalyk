@@ -1,0 +1,367 @@
+@import "./variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+
+body,
+button {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+$max-width: 1160px;
+
+.my-container {
+  margin: 0 auto;
+  max-width: $max-width;
+  @include xl {
+    max-width: $max-width - 96px;
+  }
+
+  @include md {
+    max-width: $max-width - 64px;
+  }
+}
+
+.block {
+  padding-top: 32px;
+
+  @include lg {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  @include sm {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+.horizontal-line {
+  background: url("../images/menu-selected.png");
+  width: 42px;
+  height: 1px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+
+.header-block {
+  padding-top: 32px !important;
+  padding-bottom: 0px !important;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  &__menu {
+    justify-content: flex-end;
+  }
+}
+.header-button {
+  background-color: $grey-ligth-plus;
+}
+.header-block {
+  background: url("../images/bgc-tel.png") no-repeat center center fixed;
+  width: 100%;
+  background-color: $black;
+  background-size: cover;
+}
+
+.about-long {
+  @include md {
+    text-align: center;
+  }
+}
+
+.about-short {
+  padding-top: 0px !important;
+  background-color: #f2f2f2;
+  @include md {
+    text-align: center;
+  }
+
+  &__image {
+    @media screen and (min-width: $xl) {
+      transform: scale(1.2);
+    }
+  }
+}
+.eye-catcher {
+  background-color: $black;
+}
+
+.title-xl {
+  font-size: 36px;
+  line-height: 44px;
+  color: $white;
+}
+
+.menu {
+  &__link {
+    color: white;
+  }
+}
+.menu-active {
+  position: absolute;
+  transform: translateY(8px);
+  width: 42px;
+  height: 2px;
+  background: url("../images/menu-selected.png");
+}
+.logo {
+  color: white;
+  display: flex;
+  align-items: center;
+  white-space: normal;
+
+  text-transform: uppercase;
+
+  &__lucid {
+    font-family: "Quicksand", sans-serif;
+    font-size: 24px;
+    flex-basis: 77px;
+  }
+  &__text {
+    flex-basis: 44px;
+    font-size: 9px;
+  }
+}
+
+.intro {
+  &__button {
+    margin-right: 20px;
+    @include md {
+      margin-right: 8px;
+    }
+  }
+  &__button-group {
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    padding-left: 0px;
+    list-style: none;
+  }
+  &__list-icon {
+    flex: 0 0 24px;
+  }
+  &__list-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+    @include typ-l;
+    color: $black;
+  }
+  &__overline {
+    @include typ-s-b;
+    color: $primary;
+    text-transform: uppercase;
+
+  }
+  &__sub-title {
+    @include typ-l;
+    color: $grey;
+    line-height: 30px;
+  }
+  &__big-title {
+    @include typ-xxl;
+    color: $white;
+  }
+  &__title {
+    @include typ-xl;
+    color: $black;
+
+    // mix-blend-mode: difference;
+  }
+}
+
+.btn-primary {
+  background-color: $primary !important;
+  height: 50px;
+  max-width: 159px;
+  width: 100%;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid $secondary;
+  height: 50px;
+  max-width: 159px;
+  width: 100%;
+  border-radius: 4px;
+  text-transform: uppercase;
+  &--bold {
+    font-weight: 700;
+    font-size: 14px;
+    color: $primary;
+    border: 1px solid $grey-ligth-plus;
+  }
+}
+
+.block {
+  padding: 65px 0px;
+  border-bottom: 1px solid $grey-ligth-plus;
+}
+
+.card {
+  border: none;
+  &__image {
+    border-radius: 50%;
+    border: 1px solid $grey-ligth-plus;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__content {
+    padding: 0px 24px;
+
+    @include lg {
+      padding: 0px 8px;
+    }
+
+    text-align: center;
+  }
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    color: $black;
+  }
+  &__text {
+    @include typ-l;
+    color: $grey;
+  }
+}
+
+#map {
+  height: 370px;
+}
+
+.testimonials {
+  background: url("../images/slider.png") no-repeat center center;
+  width: 100%;
+  background-color: $black;
+  background-size: cover;
+  border-bottom: none;
+  &__margin {
+    margin-bottom: 80px;
+  }
+}
+
+.contact-us {
+  padding-bottom: 0px;
+  background-color: #f2f2f2;
+}
+
+.cards {
+  text-align: center;
+}
+
+.price-card {
+  border: 1px solid $grey-ligth-plus;
+  &__title {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__text {
+    @include typ-l;
+    color: $grey;
+    padding: 32px;
+  }
+}
+
+.border-bottom {
+  border-bottom: 1px solid $grey-ligth-plus;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__icon {
+    font-size: 24px;
+    line-height: 60px;
+    vertical-align: top;
+  }
+  &__sum {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  &__data {
+    @include typ-l;
+    color: $grey;
+  }
+}
+
+.form {
+  background-color: $black;
+  max-width: 770px;
+  margin: 0 auto;
+  position: relative;
+  top: 60px;
+  z-index: 3000;
+
+  padding: 60px 70px 32px;
+
+  @include md {
+    padding: 32px 48px 24px;
+  }
+
+  @include xs {
+    padding: 24px 16px 16px;
+    top: 0px;
+  }
+}
+
+.custom-input {
+  background-color: $black;
+  border: 1px solid $grey-ligth-plus;
+}
+.custom-input::placeholder {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer {
+  background-color: $black;
+}
+
+.footer-text {
+  color: $grey;
+  text-transform: uppercase;
+}
+
+.avatar-container {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatar-name {
+  font-size: 14px;
+}
+.avatar-post {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.avatar {
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}

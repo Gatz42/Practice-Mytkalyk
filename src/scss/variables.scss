@@ -1,0 +1,119 @@
+$xs: 375px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin xs() {
+  @media screen and (max-width: $xs) {
+    @content;
+  }
+}
+
+@mixin sm() {
+  @media screen and (max-width: $sm) {
+    @content;
+  }
+}
+@mixin md() {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+@mixin lg() {
+  @media screen and (max-width: $lg) {
+    @content;
+  }
+}
+@mixin xl() {
+  @media screen and (max-width: $xl) {
+    @content;
+  }
+}
+
+$white: #ffffff;
+$black: #16151b;
+$grey: #666666;
+$grey-dark: #555555;
+$grey-light: #aaaaaa;
+$grey-ligth-plus: #f2f2f2;
+$primary: #008ed6;
+$secondary: #45454a;
+
+.white {
+  color: $white !important;
+}
+.color-primary {
+  color: $primary !important;
+}
+.color-grey {
+  color: $grey !important;
+}
+
+@mixin typography {
+  font-style: normal;
+}
+
+//semibold
+
+@mixin typ-s-b {
+  @include typography;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.6px;
+  font-weight: 600;
+  @content;
+}
+
+@mixin typ-l {
+  @include typography;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  @content;
+}
+
+@mixin typ-xl {
+  @include typography;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 1.3px;
+  font-weight: 400;
+  @content;
+}
+
+@mixin typ-xxl {
+  @include typography;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: 1.3px;
+  font-weight: 400;
+  @content;
+
+  
+  @include md {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
+
+@mixin typ-xxl-b {
+  @include typ-xxl;
+  font-weight: 700;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+@mixin container {
+  @include md {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  @include sm {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
